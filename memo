@@ -1,0 +1,46 @@
+docker compose run --rm api rails db:create
+docker compose up
+docker compose down
+
+
+
+docker compose run --rm api bundle install
+docker compose run --rm api rails db:create
+
+
+
+
+docker compose build --no-cache       
+docker compose up -d
+
+
+
+docker compose up -d    # Rails + DBサーバ起動
+docker compose exec api rails db:create    # DB作成
+open http://localhost:3000/hello    # ブラウザで確認
+
+
+docker image prune -a           
+docker volume prune
+
+
+docker ps -aq | xargs docker rm -f
+
+
+
+docker ps -aq | xargs docker rm -f
+docker images -aq | xargs docker rmi -f
+docker volume prune -f
+docker network prune -f
+
+
+
+docker compose build
+docker compose up -d
+docker compose exec web rails db:create
+
+
+docker ps -aq | xargs docker rm -f
+docker images -aq | xargs docker rmi -f
+docker volume prune -f
+docker network prune -f
